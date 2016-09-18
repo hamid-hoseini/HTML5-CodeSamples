@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+Downloading progress:
+<progress value="50" max="100">
+</progress>
+
+<p><strong>Note:</strong> The progress tag is not supported in Internet Explorer 9 and earlier versions.</p>
+
+
+<section>
+    <p>Progress: <progress> <span id="p">0</span>% </progress> </p>
+
+    <script>
+        var progressBar = document.getElementById('p');
+        function updateProgress(newValue) {
+            progressBar.textContent = newValue;
+        }
+    </script>
+</section>
+</body>
+</html>

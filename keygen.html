@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>
+    The keygen element represents a key pair generator control. When the control's form is submitted,
+    the private key is stored in the local keystore, and the public key is packaged and sent to the server.
+</p>
+<form action="/submit_key.php" method="post" enctype="multipart/form-data">
+    <keygen name="key">
+        <input type="submit" value="Submit">
+</form>
+</body>
+</html>

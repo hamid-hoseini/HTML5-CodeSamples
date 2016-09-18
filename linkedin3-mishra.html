@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+
+        aside {
+            width: 500px;
+            background-color: #eee;
+        }
+
+        dt, dd, figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        figure {
+            padding-right: 0.5em;
+            padding-top: 0.5em;
+        }
+
+        dt {
+            text-align: right;
+
+        }
+
+        dl {
+            width: 100%;
+            overflow: auto;
+            padding: 0.5em 0 0.75em;
+
+        }
+
+        dt {
+            width: 18%;
+            float: left;
+            clear: both;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            max-height: 100px;
+        }
+
+        dd {
+
+            padding-top: 1em;
+            width:80%;
+            max-height: 100px;
+
+        }
+
+        dd.title {
+            width: 82%;
+            display: inline-block;
+            float: left;
+            padding-top: 0.5em;
+        }
+
+        span.delete {
+            display: inline-block;
+            color: #aaa;
+            float: right;
+            cursor: pointer;
+            padding: 0 0.75em;
+        }
+
+        .hide {
+            max-height: 0;
+            overflow-y: hidden;
+            transition: max-height 500ms ease;
+        }
+        .fast {
+            transition: max-height 100ms ease;
+        }
+    </style>
+    <script src="../Jquery/js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('span.delete').click(function () {
+                var index = $(this).parent().index();
+                var children = $('dl').children();
+
+                var indices = [index + 2, index + 1, index, index - 1 ];
+
+                indices.forEach(function (_index) {
+                    children.eq(_index).addClass('hide');
+                });
+
+            });
+        });
+    </script>
+</head>
+<body>
+
+<aside>
+
+    <dl>
+        <dt>
+            <figure>
+                <img src="15c722d.jpg" alt="Gourav Kochchar"/>
+            </figure>
+        </dt>
+        <dd class="title">
+            Gourav Kochchar
+            <span class="delete">x</span>
+        </dd>
+        <dd class="below">Marketing specialist at GoLiveLabs</dd>
+        <dd><span>Connect</span></dd>
+
+        <dt>
+            <figure>
+                <img src="15c722d.jpg" alt="Gourav Kochchar"/>
+            </figure>
+        </dt>
+        <dd class="title">
+            Gourav Kochchar
+            <span class="delete">x</span>
+        </dd>
+        <dd class="below">Marketing specialist at GoLiveLabs</dd>
+        <dd><span>Connect</span></dd>
+
+        <dt>
+            <figure>
+                <img src="15c722d.jpg" alt="Gourav Kochchar"/>
+            </figure>
+        </dt>
+        <dd class="title">
+            Gourav Kochchar
+            <span class="delete">x</span>
+        </dd>
+        <dd class="below">Marketing specialist at GoLiveLabs</dd>
+        <dd><span>Connect</span></dd>
+    </dl>
+
+</aside>
+
+</body>
+</html>

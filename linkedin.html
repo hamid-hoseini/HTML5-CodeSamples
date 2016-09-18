@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>linkedin </title>
+    <script src="../Jquery/js/jquery.min.js" type="text/javascript"></script>
+    <style>
+        body{
+            font-family: "Times New Roman", "Helvetica", Helvetica, Arial, sans-serif;
+            font-size: small;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        dd{
+            display: inline-block;
+        }
+        footer>a{
+            float: right;
+        }
+        section{
+            width: 350px;
+        }
+        figure{
+
+            margin: 0 10px 0 0;
+            border: 1px solid #000;
+            float: left;
+        }
+        img{
+            height: 40px;
+            width:40px;
+        }
+        footer{
+            clear : both;
+        }
+        div.content{
+            margin-bottom: 10px;
+        }
+        span{
+            float: left;
+            width :280px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.dismiss').click(function(){
+                $(this).parent(this).animate({ height: 'toggle', opacity: 'toggle' }, 'slow');
+            });
+        });
+    </script>
+
+</head>
+<body>
+<section>
+    <header>
+        <h4><a href="#">People You May Know</a></h4>
+    </header>
+
+
+    <div class="content">
+        <figure class="person_img"><img src="https://media.licdn.com/mpr/mpr/shrink_65_65/p/7/000/251/1fb/15c722d.jpg" alt="Jack Smith"/></figure>
+        <span>Hamid hoseini, Software Engineer and Web Developer at Golive Labs</span>
+        <a class="dismiss" href="#">X</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="content">
+        <figure class="person_img"><img src="https://media.licdn.com/mpr/mpr/shrink_65_65/p/7/000/251/1fb/15c722d.jpg" alt="Jack Smith"/></figure>
+        <span>Hamid hoseini, Software Engineer and Web Developer at Golive Labs</span>
+        <a class="dismiss" href="#">X</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="content">
+        <figure class="person_img"><img src="https://media.licdn.com/mpr/mpr/shrink_65_65/p/7/000/251/1fb/15c722d.jpg" alt="Jack Smith"/></figure>
+        <span>Hamid hoseini, Software Engineer and Web Developer at Golive Labs</span>
+        <a class="dismiss" href="#">X</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+    <footer>
+        <a href="#" id="seemore" >see more</a>
+    </footer>
+</section>
+
+
+</body>
+</html>
